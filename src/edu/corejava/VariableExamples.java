@@ -28,8 +28,6 @@ public class VariableExamples {
         boolean a = true;
         char c = 'c';
         String str = "This is a string";
-        String x1 = "Pizza";
-        String x2 = "Cheese";
 
         // printing out vars
 
@@ -39,6 +37,28 @@ public class VariableExamples {
         System.out.println(a);
         System.out.println(c);
         System.out.println(str);
+
+        // swap vars
+
+        String x1 = "Pizza";
+        String x2 = "Cheese";
+        String tmp = "";
+
+        System.out.println("E.g. Swapping vars e.g.:");
+        System.out.println("x1: " + x1);
+        System.out.println("x2: " + x2);
+
+        tmp = x2;
+        x2 = x1;
+        x1 = tmp;
+
+
+        System.out.println("Vars swapped:");
+        System.out.println("x1: " + x1);
+        System.out.println("x2: " + x2);
+
+
+
     }
 
 
