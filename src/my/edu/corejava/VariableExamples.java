@@ -1,4 +1,4 @@
-package edu.corejava;
+package my.edu.corejava;
 
 public class VariableExamples {
     /****************
