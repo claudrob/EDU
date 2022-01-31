@@ -1,5 +1,5 @@
 package my.edu.oop.package1;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 import my.edu.oop.package2.*;
 
 public class A {
