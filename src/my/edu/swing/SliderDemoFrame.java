@@ -15,6 +15,7 @@ public class SliderDemoFrame implements ChangeListener
     public SliderDemoFrame(){
 
         frame = new JFrame("Slider Demo");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         panel = new JPanel();
@@ -30,6 +31,15 @@ public class SliderDemoFrame implements ChangeListener
         slider.setMajorTickSpacing(25);
 
         slider.setPaintLabels(true);
+        slider.setFont(new Font("MV Boli", Font.PLAIN, 15));
+        label.setFont(new Font("MV Boli", Font.PLAIN, 15));
+        slider.setOrientation(SwingConstants.VERTICAL);
+
+        label.setText("C = " + slider.getValue());
+
+        slider.addChangeListener(this);
+
+        slider.setPaintLabels(true);
 
         panel.add(slider);
         panel.add(label);
@@ -41,6 +51,8 @@ public class SliderDemoFrame implements ChangeListener
     }
 
     public void stateChanged(ChangeEvent event){
+
+        label.setText("C = " + slider.getValue());
 
     }
 
