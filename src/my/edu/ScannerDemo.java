@@ -31,12 +31,14 @@ public class ScannerDemo {
         System.out.println("Enter two words: ");
         String s1, s2, s3;
         s1 = keyboard.next();
+
         s2 = keyboard.next();
         s3 = keyboard.nextLine();
 
         System.out.println("You entered \"" + s1 + "\" and \"" + s2 + "\"");
 
         System.out.print("Next enter a line of text: ");
+
         String s4;
         s4 = keyboard.nextLine();
 
