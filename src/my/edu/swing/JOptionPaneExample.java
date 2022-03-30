@@ -4,7 +4,7 @@ package my.edu.swing;
 
 import javax.swing.JOptionPane;
 
-public class JOpitonPaneExample {
+public class JOptionPaneExample {
     public static void main(String[] args) {
 
 //        JOptionPane.showMessageDialog(null,
