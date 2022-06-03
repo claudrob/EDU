@@ -8,6 +8,11 @@ public class HelloWorld {
 
         System.out.println("Value " + myVariableInteger);
 
+        myVariableInteger = 5;
+
+        System.out.println("New Value " + myVariableInteger);
+
+
 
     }
 }
