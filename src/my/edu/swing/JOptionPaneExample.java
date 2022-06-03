@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class JOptionPaneExample {
     public static void main(String[] args) {
 
-//        JOptionPane.showMessageDialog(null,
+//        JOptionPane.showMessageDialog(nqull,
 //                "This is some useless info",
 //                "This is the Plain Message!",
 //                JOptionPane.PLAIN_MESSAGE);
