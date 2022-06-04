@@ -14,6 +14,11 @@ public class PrimitivesUNI {
         System.out.println("minimum byte value: " + Byte.MIN_VALUE) ;
         System.out.println("maximum byte value: " + Byte.MAX_VALUE) ;
 
+        short numberShort = 10;
+        System.out.println("Number Short = " + numberShort);
+        System.out.println("Max Number Short = " + Short.MAX_VALUE);
+        System.out.println("Min Number Short = " + Short.MIN_VALUE);
+
     }
 
 
