@@ -1,6 +1,6 @@
 package my.edu.univeristy;
 
-public class Persona {
+public final class Persona {
 
     public String name;
     public String surname;
