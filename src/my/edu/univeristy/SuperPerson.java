@@ -53,6 +53,11 @@ public class SuperPerson {
         this.address = address;
     }
 
+
+    public void imprimir(){
+        System.out.println(this);
+    }
+
     @Override
     public String toString() {
         return "SuperPerson{" +

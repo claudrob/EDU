@@ -64,6 +64,11 @@ public class Client extends SuperPerson{
     }
 
     @Override
+    public void imprimir(){
+        super.imprimir();
+    }
+
+    @Override
     public String toString() {
         return "Client{" +
                 "clientId=" + clientId +
