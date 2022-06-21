@@ -8,13 +8,18 @@ public class Person {
     Person(){
 
     }
-    Person(String name, int age){
+
+    public Person(String name){
+        this.name = name;
+    }
+
+    public Person(String name, int age){
         this.name = name;
         this.age = age;
 
     }
 
     public String toString(){
-        return this.name + "\n" + this.age + "\n";
+        return this.name + "\t" + this.age;
     }
 }
