@@ -7,6 +7,12 @@ public final class Persona {
     public String name;
     public String surname;
 
+    public Persona(){}
+
+    public Persona(String name){
+        this.name = name;
+    }
+
     public void displayDetails(){
         System.out.println("Name: " + name);
         System.out.println("Surname: " + surname);
