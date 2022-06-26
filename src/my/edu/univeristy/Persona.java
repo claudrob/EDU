@@ -26,6 +26,7 @@ public final class Persona {
     }
 
     public Persona(String name){
+
         this.name = name;
     }
 
