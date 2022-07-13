@@ -5,9 +5,17 @@ public class Employee {
     private int employeeID;
     private static int employeeCounter = 0;
 
-    private String name;
-    private double salary;
+    protected String name;
+    protected double salary;
     private boolean eliminated;
+
+    public Employee(String name, double salary){
+
+        employeeID = ++Employee.employeeCounter;
+        this.name = name;
+        this.salary = salary;
+        this.eliminated = false;
+    }
 
     public Employee(String name, double salary, boolean eliminated){
 
@@ -39,6 +47,10 @@ public class Employee {
 
     public boolean isEliminated(){
         return this.eliminated;
+    }
+
+    public String getDetails(){
+        return "Name: " + this.name + ", salary: " + this.salary;
     }
 
     public String toString(){
