@@ -1,5 +1,7 @@
 package my.edu.univeristy;
 
+import java.util.Objects;
+
 public class Employee {
 
     private int employeeID;
@@ -49,6 +51,22 @@ public class Employee {
         return this.eliminated;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return
+                //employeeID == employee.employeeID &&
+                Double.compare(employee.salary, salary) == 0 && eliminated == employee.eliminated && name.equals(employee.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, salary, eliminated);
+//        return Objects.hash(employeeID, name, salary, eliminated);
+    }
+
     public String getDetails(){
         return "Name: " + this.name + ", salary: " + this.salary;
     }
@@ -60,5 +78,9 @@ public class Employee {
                 ", eliminated: " + eliminated +
                 "]";
     }
+
+
+
+
 
 }
