@@ -2,7 +2,20 @@ package my.edu.univeristy;
 
 import java.util.Scanner;
 
-public class Rectangle {
+public class Rectangle extends GeoShape {
+
+
+    public Rectangle(String figureType){
+        super(figureType);
+    }
+
+    @Override
+    public void draw(){
+        System.out.println("Printing: " + this.getClass().getSimpleName() );
+        System.out.println("Printing: " + this.getClass().getName() );
+    }
+
+
 
     public static void main(String[] args) {
 
