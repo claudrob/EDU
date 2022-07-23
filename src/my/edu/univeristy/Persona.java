@@ -1,6 +1,8 @@
 package my.edu.univeristy;
 
-public final class Persona {
+import java.io.Serializable;
+
+public final class Persona implements Serializable {
 
     public final static int PERSON_CONSTANT = 1;
 
