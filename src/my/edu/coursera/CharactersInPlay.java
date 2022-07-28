@@ -42,7 +42,7 @@ public class CharactersInPlay {
 
     public void findAllCharacters(){
         // Select file
-        String fileName = "likeit.txt";
+        String fileName = "errors.txt";
 //        String fileName = "macbethSmall.txt";
 
         //Process file

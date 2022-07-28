@@ -28,7 +28,7 @@ public class WordFrequencies {
         myWords.clear();
 
         // Select file
-        String fileName = "likeit.txt";
+        String fileName = "errors.txt";
 //        String fileName = "testwordfreqs.txt";
 
         //Process file
@@ -131,7 +131,7 @@ public class WordFrequencies {
     public  void printMaxWord(){
         int indexOfMaxWord = maxIndex();
         System.out.println("The word that occurs most often and its count are:" + myWords.get(indexOfMaxWord) +
-                " " + myFreq.get(myFreq.get(indexOfMaxWord)));
+                " " + myFreq.get(indexOfMaxWord));
     }
 
 }
