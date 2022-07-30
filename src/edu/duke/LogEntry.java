@@ -14,7 +14,7 @@ public class LogEntry
        ipAddress = ip;
        accessTime = time;
        request = req;
-       statusCode = status;Spring Air Colchon Revolution Individual
+       statusCode = status;
        bytesReturned = bytes;
        
    }
