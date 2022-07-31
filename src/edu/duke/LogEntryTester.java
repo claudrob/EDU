@@ -14,7 +14,8 @@ public class LogEntryTester
     public static void main(String[] args) {
         LogEntryTester logEntryTester = new LogEntryTester();
 //        logEntryTester.testLogEntry();
-        logEntryTester.testLogAnalyzer();
+//        logEntryTester.testLogAnalyzer();
+        logEntryTester.testLogAnalyzerIPs();
     }
 
     public void testLogEntry() {
@@ -57,5 +58,27 @@ public class LogEntryTester
     }
 
 
+    public void testLogAnalyzerIPs() {
+        LogAnalyzer logAnalyzer = new LogAnalyzer();
+//        logAnalyzer.readFile("data/weblog3-short_log");
+        logAnalyzer.readFile("data/weblog1_log");
+        HashMap<String, Integer> resultHM = logAnalyzer.countVisitsPerIP();
+        System.out.println("resultHM = " + resultHM);
+        int mostNumberVisitsByIP = logAnalyzer.mostNumberVisitsByIP(resultHM);
+        System.out.println("mostNumberVisitsByIP = " + mostNumberVisitsByIP);
+
+        ArrayList<String> popularIp = logAnalyzer.iPsMostVisits(resultHM);
+        System.out.println("popularIp = " + popularIp);
+
+        HashMap<String, ArrayList<String>> iPsForDaysMap = logAnalyzer.iPsForDays();
+        System.out.println("iPsForDaysMap = " + iPsForDaysMap);
+        System.out.println("dayWithMostIPVisits = " + logAnalyzer.dayWithMostIPVisits(iPsForDaysMap));
+
+        System.out.println("*******");
+        ArrayList<String> ipResultAL = logAnalyzer.iPsWithMostVisitsOnDay(iPsForDaysMap, "Mar 17");
+        System.out.println("iPsWithMostVisitsOnDay = " + ipResultAL);
+
+
+    }
 
 }
