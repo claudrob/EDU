@@ -1,14 +1,12 @@
 package my.edu.coursera;
 
-import my.edu.oop.package1.A;
-
 public class CaesarBreaker {
 
     public static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public static void main(String[] args) {
 
-        System.out.println(CaesarCipher.encryptTwoKeys("Top ncmy qkff vi vguv vbg ycpx", 26 - 2,26 - 20));
+        System.out.println(MyCaesarCipher.encryptTwoKeys("Top ncmy qkff vi vguv vbg ycpx", 26 - 2,26 - 20));
         testDecrypt();
         testHalfOfString();
         testGetKey();
@@ -54,7 +52,7 @@ public class CaesarBreaker {
     }
 
     public static String decrypt(String encrypted, int key){
-        String result = CaesarCipher.encrypt(encrypted, 26 - key);
+        String result = MyCaesarCipher.encrypt(encrypted, 26 - key);
         return  result;
     }
 
@@ -66,7 +64,7 @@ public class CaesarBreaker {
             decryptKey = 26 - (4-maxDex);
         }
 
-        String result = CaesarCipher.encrypt(encrypted, 26 - decryptKey);
+        String result = MyCaesarCipher.encrypt(encrypted, 26 - decryptKey);
         return  result;
     }
 
@@ -97,7 +95,7 @@ public class CaesarBreaker {
         System.out.println("Decrypt key1 = " + key1);
         System.out.println("Decrypt key2 = " + key2);
 
-        decrypted = CaesarCipher.encryptTwoKeys(encrypted, 26 - key1, 26 - key2);
+        decrypted = MyCaesarCipher.encryptTwoKeys(encrypted, 26 - key1, 26 - key2);
         System.out.println("decrypted = " + decrypted);
 
 
