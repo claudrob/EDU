@@ -1,4 +1,6 @@
-import edu.duke.*;
+package edu.duke.vigenere;
+
+import edu.duke.vigenere.*;
 import java.util.*;
 
 public class VigenereCipher {

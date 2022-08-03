@@ -1,3 +1,5 @@
+package edu.duke.vigenere;
+
 import edu.duke.*;
 
 public class CaesarCracker {
