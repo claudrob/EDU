@@ -11,7 +11,8 @@ public class TesterForCaesarCipher {
 //        tester.testViginereCipher();
 //        tester.testSliceString();
 //        tester.testTryKeyLength();
-        tester.testBreakVigenere();
+//        tester.testBreakVigenere();
+        tester.testBreakVigenereWithDictionary();
     }
 
     public void testCaesarCipher(){
@@ -92,6 +93,13 @@ public class TesterForCaesarCipher {
         VigenereBreaker vigenereBreaker = new VigenereBreaker();
         vigenereBreaker.breakVigenere();
     }
+
+    public void testBreakVigenereWithDictionary(){
+        VigenereBreaker vigenereBreaker = new VigenereBreaker();
+        vigenereBreaker.breakVigenereWithDictionary ();
+    }
+
+
 
     //msg.split("\\W")
 
