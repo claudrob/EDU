@@ -11,14 +11,14 @@ public interface IDataAccess {
 
     boolean exist(String name) throws DataAccessException;
 
-    List<Movie> list() throws ReadDataException;
+    List<Movie> list(String fileName) throws ReadDataException;
 
     void write(Movie movie, String fileName, boolean append) throws WriteDataException;
 
     String search(String fileName, String movieName) throws ReadDataException;
 
-    void create(String fileName, String movieName) throws WriteDataException;
+    void create(String fileName) throws DataAccessException;
 
-    void delete(String fileName, String movieName) throws WriteDataException;
+    void delete(String fileName) ;
 
 }
