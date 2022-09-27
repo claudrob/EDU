@@ -32,5 +32,13 @@ public class TestQuestion1_1 {
          boolean result6 = Question1_1.uniqueCharacters(s6);
         System.out.println(s6 + "; result6 = " + result6);
 
+        System.out.println("Testing reverse string");
+        System.out.println(s1 + ": " + Question1_1.reverseString(s1));
+        System.out.println(s2 + ": " + Question1_1.reverseString(s2));
+        System.out.println(s3 + ": " + Question1_1.reverseString(s3));
+        System.out.println(s4 + ": " + Question1_1.reverseString(s4));
+        System.out.println(s5 + ": " + Question1_1.reverseString(s5));
+        System.out.println(s6 + ": " + Question1_1.reverseString(s6));
+
     }
 }
