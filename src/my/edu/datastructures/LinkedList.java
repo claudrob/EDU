@@ -36,7 +36,16 @@ public class LinkedList {
 
     public void prepend(int value){
         // create new Node
-        //
+        Node newNode = new Node(value);
+        if(length == 0){
+            head = newNode;
+            tail = newNode;
+        }
+        else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
 
     }
 
@@ -46,6 +55,30 @@ public class LinkedList {
         boolean result = false;
 
         return result;
+
+    }
+
+    public Node removeFirst(){
+
+        if(length == 0){
+            return null;
+        }
+
+        Node tmpNode = head;
+        head = head.next;
+        tmpNode.next = null;
+        length--;
+
+//        if(length == 1){
+//            tail = head;
+//        }
+        if (length == 0){
+            tail = null;
+        }
+
+
+
+        return tmpNode;
 
     }
 
@@ -68,9 +101,7 @@ public class LinkedList {
             return tmpNode;
         }
         else {
-//            Node lastNode = tail;
 
-//            tmpNode = head;
             // find the second last
             while (tmpNode.next != null) {
 
