@@ -59,27 +59,19 @@ public class LinkedList {
     }
 
     public Node removeFirst(){
-
-        if(length == 0){
-            return null;
-        }
+        if(length == 0) return null;
 
         Node tmpNode = head;
         head = head.next;
         tmpNode.next = null;
         length--;
-
 //        if(length == 1){
 //            tail = head;
 //        }
         if (length == 0){
             tail = null;
         }
-
-
-
         return tmpNode;
-
     }
 
     public Node removeLast(){
@@ -113,6 +105,35 @@ public class LinkedList {
             length--;
         }
         return tmpNode;
+    }
+
+    public Node get(int index){
+        if(length < 0 || index >= length){
+            return null;
+        }
+        Node tmpNode = head;
+        int counter = 0;
+        // can use For loop
+        while(tmpNode != null && counter < index){
+            counter++;
+            tmpNode = tmpNode.next;
+
+        }
+        return tmpNode;
+
+    }
+
+    public boolean set(int index, int value){
+        if(index < 0 || index >= length){
+            return false;
+        }
+        Node temp = head;
+
+        for(int i = 0; i < index; i++){
+            temp = temp.next;
+        }
+        temp.value = value;
+        return true;
     }
 
     public void printList(){

@@ -8,15 +8,44 @@ public class TestLinkedList {
     public static void main(String[] args) {
 //        testRemoveLast();
 //        testPrepend();
-        testRemoveFirst();
+//        testRemoveFirst();
+        testGet();
 
 
     }
 
+    private static void testGet(){
+        LinkedList myLinkedList = new LinkedList(0);
+        myLinkedList.append(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+        myLinkedList.append(4);
+
+        System.out.println("Set index 2 to " + 9);
+        myLinkedList.set(2, 9);
+        System.out.println("Before Get ");
+        printOutLinkedListDetail(myLinkedList);
+
+        for(int i = 0; i <= 5; i++){
+            Node tmp = myLinkedList.get(i);
+            if(tmp != null){
+                System.out.println(i + ": returned -> " + tmp.value);
+            }
+            else {
+                System.out.println(i + ": returned -> " + tmp);
+
+            }
+        }
+
+    }
+
+
+
+
     private static void testRemoveFirst() {
         LinkedList myLinkedList = new LinkedList(2);
         myLinkedList.append(1);
-//        myLinkedList.append(3);
+        myLinkedList.append(3);
 
         System.out.println("Before RemoveFirst");
         printOutLinkedListDetail(myLinkedList);
@@ -30,10 +59,10 @@ public class TestLinkedList {
 //
         Node removedNode =  myLinkedList.removeFirst();
         System.out.println("removedNode = " + removedNode.value);
-        removedNode =  myLinkedList.removeFirst();
-        System.out.println("removedNode = " + removedNode.value);
-        removedNode =  myLinkedList.removeFirst();
-        System.out.println("removedNode = " + removedNode);
+//        removedNode =  myLinkedList.removeFirst();
+//        System.out.println("removedNode = " + removedNode.value);
+//        removedNode =  myLinkedList.removeFirst();
+//        System.out.println("removedNode = " + removedNode);
 
 
         System.out.println("AFTER Remove First");
