@@ -123,20 +123,31 @@ public class LinkedList {
 
     }
 
-    public boolean set(int index, int value){
-        if(index < 0 || index >= length){
-            return false;
-        }
-        Node temp = head;
+//    public boolean set(int index, int value){
+//        if(index < 0 || index >= length){
+//            return false;
+//        }
+//        Node temp = head;
+//
+//        for(int i = 0; i < index; i++){
+//            temp = temp.next;
+//        }
+//        temp.value = value;
+//        return true;
+//    }
 
-        for(int i = 0; i < index; i++){
-            temp = temp.next;
+    public boolean set(int index, int value) {
+        Node temp = get(index);
+        boolean result = false;
+        if(temp != null){
+            temp.value = value;
+            result = true;
         }
-        temp.value = value;
-        return true;
+        return result;
     }
 
-    public void printList(){
+
+        public void printList(){
         Node temp = head;
         while(temp != null){
             System.out.println(temp.value);
