@@ -9,22 +9,23 @@ public class TestLinkedList {
 //        testRemoveLast();
 //        testPrepend();
 //        testRemoveFirst();
-        testGet();
+        testGetAndSet();
 
 
     }
 
-    private static void testGet(){
-        LinkedList myLinkedList = new LinkedList(0);
-        myLinkedList.append(1);
-        myLinkedList.append(2);
+    private static void testGetAndSet(){
+        LinkedList myLinkedList = new LinkedList(11);
         myLinkedList.append(3);
-        myLinkedList.append(4);
+        myLinkedList.append(23);
+        myLinkedList.append(7);
+//        myLinkedList.append(4);
 
-        System.out.println("Set index 2 to " + 9);
-        myLinkedList.set(2, 9);
         System.out.println("Before Get ");
         printOutLinkedListDetail(myLinkedList);
+
+        System.out.println("Set index 1 to " + 4);
+        myLinkedList.set(1, 4);
 
         for(int i = 0; i <= 5; i++){
             Node tmp = myLinkedList.get(i);
