@@ -9,7 +9,8 @@ public class TestLinkedList {
 //        testRemoveLast();
 //        testPrepend();
 //        testRemoveFirst();
-        testGetAndSet();
+//        testGetAndSet();
+        testInsert();
 
 
     }
@@ -40,6 +41,29 @@ public class TestLinkedList {
 
     }
 
+    private static void testInsert(){
+        LinkedList myLinkedList = new LinkedList(0);
+        myLinkedList.append(2);
+//          myLinkedList.append(4);
+
+        System.out.println("Before insert ");
+        printOutLinkedListDetail(myLinkedList);
+
+        System.out.println("insert 1");
+        myLinkedList.insert(1, 1);
+
+        for(int i = 0; i <= 3; i++){
+            Node tmp = myLinkedList.get(i);
+            if(tmp != null){
+                System.out.println(i + ": returned -> " + tmp.value);
+            }
+            else {
+                System.out.println(i + ": returned -> " + tmp);
+
+            }
+        }
+
+    }
 
 
 

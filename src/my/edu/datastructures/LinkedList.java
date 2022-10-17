@@ -49,14 +49,6 @@ public class LinkedList {
 
     }
 
-    public boolean insert(int index, int value){
-        //Create New Node
-
-        boolean result = false;
-
-        return result;
-
-    }
 
     public Node removeFirst(){
         if(length == 0) return null;
@@ -153,6 +145,26 @@ public class LinkedList {
             System.out.println(temp.value);
             temp = temp.next;
         }
+    }
+
+    public boolean insert(int index, int value){
+        if(index < 0 || index > length) return false;
+        if(index == 0){
+            prepend(value);
+            return true;
+        }
+        if(index == length){
+            append(value);
+            return true;
+
+        }
+        Node newNode = new Node(value);
+        Node tempNode = get(index - 1);
+
+        newNode.next = tempNode.next;
+        tempNode.next = newNode;
+        length++;
+        return true;
     }
 
     public void getHead(){
