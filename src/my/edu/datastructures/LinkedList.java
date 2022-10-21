@@ -6,27 +6,25 @@ public class LinkedList {
     private Node tail;
     private int length;
 
-    public LinkedList(int value){
+    public LinkedList(int value) {
         // create new Node
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;
         length = 1;
-
     }
 
-    public void append(int value){
+    public void append(int value) {
         // create new Node
         // add node to end
         //move tail
         Node newNode = new Node(value);
 
 //        if(head == null && tail == null){
-        if(length == 0){
+        if (length == 0) {
             head = newNode;
             tail = newNode;
-        }
-        else {
+        } else {
             tail.next = newNode;
             tail = newNode;
         }
@@ -34,14 +32,13 @@ public class LinkedList {
 
     }
 
-    public void prepend(int value){
+    public void prepend(int value) {
         // create new Node
         Node newNode = new Node(value);
-        if(length == 0){
+        if (length == 0) {
             head = newNode;
             tail = newNode;
-        }
-        else {
+        } else {
             newNode.next = head;
             head = newNode;
         }
@@ -50,8 +47,8 @@ public class LinkedList {
     }
 
 
-    public Node removeFirst(){
-        if(length == 0) return null;
+    public Node removeFirst() {
+        if (length == 0) return null;
 
         Node tmpNode = head;
         head = head.next;
@@ -60,15 +57,15 @@ public class LinkedList {
 //        if(length == 1){
 //            tail = head;
 //        }
-        if (length == 0){
+        if (length == 0) {
             tail = null;
         }
         return tmpNode;
     }
 
-    public Node removeLast(){
+    public Node removeLast() {
 
-        if(length == 0){
+        if (length == 0) {
             return null;
         }
 
@@ -76,15 +73,13 @@ public class LinkedList {
         Node preNode = head;
 
 
-        if(length == 1)
-        {
+        if (length == 1) {
 //            tmpNode = head;
             head = null;
             tail = null;
             length--;
             return tmpNode;
-        }
-        else {
+        } else {
 
             // find the second last
             while (tmpNode.next != null) {
@@ -99,14 +94,14 @@ public class LinkedList {
         return tmpNode;
     }
 
-    public Node get(int index){
-        if(length < 0 || index >= length){
+    public Node get(int index) {
+        if (length < 0 || index >= length) {
             return null;
         }
         Node tmpNode = head;
         int counter = 0;
         // can use For loop
-        while(tmpNode != null && counter < index){
+        while (tmpNode != null && counter < index) {
             counter++;
             tmpNode = tmpNode.next;
 
@@ -131,7 +126,7 @@ public class LinkedList {
     public boolean set(int index, int value) {
         Node temp = get(index);
         boolean result = false;
-        if(temp != null){
+        if (temp != null) {
             temp.value = value;
             result = true;
         }
@@ -139,21 +134,21 @@ public class LinkedList {
     }
 
 
-        public void printList(){
+    public void printList() {
         Node temp = head;
-        while(temp != null){
+        while (temp != null) {
             System.out.println(temp.value);
             temp = temp.next;
         }
     }
 
-    public boolean insert(int index, int value){
-        if(index < 0 || index > length) return false;
-        if(index == 0){
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > length) return false;
+        if (index == 0) {
             prepend(value);
             return true;
         }
-        if(index == length){
+        if (index == length) {
             append(value);
             return true;
 
@@ -167,25 +162,60 @@ public class LinkedList {
         return true;
     }
 
-    public void getHead(){
-        if(head == null){
+    public Node remove(int index){
+        if(index < 0 || index >= length) return null;
+        if(index == 0){
+            return removeFirst();
+        }
+        if(index == (length - 1)){
+            return removeLast();
+        }
+        Node previous = get(index - 1);
+        Node temp = previous.next;
+
+        previous.next = temp.next;
+        temp.next = null;
+        length--;
+        return temp;
+    }
+
+    public void getHead() {
+        if (head == null) {
             System.out.println("Head: null");
-        }else {
+        } else {
             System.out.println("Head: " + head.value);
 
         }
     }
 
-    public void getTail(){
-        if(tail == null){
-            System.out.println("Tail: null" );
-        }else{
+    public void getTail() {
+        if (tail == null) {
+            System.out.println("Tail: null");
+        } else {
 
             System.out.println("Tail: " + tail.value);
         }
     }
 
-    public void getLength(){
+    public void reverse(){
+        Node temp = head;
+        head = tail;
+        tail = temp;
+
+        Node after = temp.next;
+        Node before = null;
+
+        for(int i = 0; i < length; i++){
+            after = temp.next;
+            temp.next = before;
+            before = temp;
+            temp = after;
+        }
+
+
+    }
+
+    public void getLength() {
         System.out.println("Length: " + length);
     }
 }

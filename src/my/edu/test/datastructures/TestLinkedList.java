@@ -10,9 +10,9 @@ public class TestLinkedList {
 //        testPrepend();
 //        testRemoveFirst();
 //        testGetAndSet();
-        testInsert();
-
-
+//        testInsert();
+//        testRemoveIndex();
+        testReverse();
     }
 
     private static void testGetAndSet(){
@@ -41,6 +41,40 @@ public class TestLinkedList {
 
     }
 
+    private static void testReverse(){
+        LinkedList myLinkedList = new LinkedList(1);
+        myLinkedList.append(2);
+        myLinkedList.append(3);
+        myLinkedList.append(4);
+        System.out.println("Print out created LL;");
+        printOutLinkedListDetail(myLinkedList);
+
+        myLinkedList.reverse();
+
+        System.out.println("Print out Reverse LL;");
+        printOutLinkedListDetail(myLinkedList);
+
+    }
+
+    private static void testRemoveIndex(){
+        LinkedList myLinkedList = new LinkedList(11);
+        myLinkedList.append(3);
+        myLinkedList.append(23);
+        myLinkedList.append(7);
+
+        System.out.println("Print out Linked list");
+        printOutLinkedListDetail(myLinkedList);
+
+        Node removedNode = myLinkedList.remove(2);
+        System.out.println("removedNode = " + removedNode);
+
+        System.out.println("Print out LL after Remove Index:");
+        printOutLinkedListDetail(myLinkedList);
+
+
+
+    }
+
     private static void testInsert(){
         LinkedList myLinkedList = new LinkedList(0);
         myLinkedList.append(2);
@@ -52,6 +86,9 @@ public class TestLinkedList {
         System.out.println("insert 1");
         myLinkedList.insert(1, 1);
 
+        System.out.println("insert 4: " + myLinkedList.insert(3, 4));
+
+
         for(int i = 0; i <= 3; i++){
             Node tmp = myLinkedList.get(i);
             if(tmp != null){
@@ -62,6 +99,7 @@ public class TestLinkedList {
 
             }
         }
+
 
     }
 
