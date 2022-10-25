@@ -12,6 +12,15 @@ public class DoublyLinkedList {
         length = 1;
     }
 
+    public boolean set(int index, int value){
+        Node temp = get(index);
+        if(temp != null) {
+            temp.value = value;
+            return true;
+        }
+        return false;
+    }
+
     public Node get(int index){
         if(index < 0 || index >= length) return null;
         Node temp = head;

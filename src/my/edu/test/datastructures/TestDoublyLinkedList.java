@@ -16,6 +16,7 @@ public class TestDoublyLinkedList {
         testPrepend();
         testRemoveFirst();
         testGet();
+        testSet();
 
     }
 
@@ -79,6 +80,17 @@ public class TestDoublyLinkedList {
         }
 
     }
+
+    public static void testSet(){
+        System.out.println("Starting Test for \"Set\"");
+
+        for(int i = 0; i <= 10; i++){
+            myDLL.set(i, (i + 1) * 10);
+        }
+        printOutDLL();
+    }
+
+
 
     private static void testAppend(){
         System.out.println("Testing: append()");
