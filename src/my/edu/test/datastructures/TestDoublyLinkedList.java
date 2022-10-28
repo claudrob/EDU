@@ -17,6 +17,8 @@ public class TestDoublyLinkedList {
         testRemoveFirst();
         testGet();
         testSet();
+        testInsert();
+        testRemove();
 
     }
 
@@ -61,6 +63,34 @@ public class TestDoublyLinkedList {
         printOutDLL();
     }
 
+
+    private static void testInsert(){
+        System.out.println("Test: INSERT");
+
+        myDLL.insert(11, 250);
+        myDLL.insert(0, 200);
+        myDLL.insert(4, 220);
+        myDLL.insert(8, 240);
+
+
+        printOutDLL();
+
+
+    }
+
+    private static void testRemove(){
+        System.out.println("Test: Remove(index)");
+
+        System.out.println("Removed: " + myDLL.remove(15));
+        System.out.println("Removed: " + myDLL.remove(14));
+        System.out.println("Removed: " + myDLL.remove(8));
+        System.out.println("Removed: " + myDLL.remove(0));
+
+
+        printOutDLL();
+
+
+    }
 
     private static void testGet(){
         System.out.println("Test: GET");
