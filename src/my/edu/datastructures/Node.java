@@ -5,6 +5,10 @@ public class Node {
     public Node next;
     public Node prev;
 
+    //Binary Search Tree
+    public Node left;
+    public Node right;
+
     public Node(int value){
         this.value = value;
     }
