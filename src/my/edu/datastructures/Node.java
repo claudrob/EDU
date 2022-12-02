@@ -9,7 +9,15 @@ public class Node {
     public Node left;
     public Node right;
 
+    //HashTable
+    public String key;
+
     public Node(int value){
+        this.value = value;
+    }
+
+    public Node(String key, int value){
+        this.key = key;
         this.value = value;
     }
 
