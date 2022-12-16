@@ -1,0 +1,4 @@
+Hello from Claud!
+Testing writing to file!
+Hello from Claud!
+Testing writing to file!
