@@ -5,6 +5,81 @@ import my.edu.datastructures.BinarySearchTree;
 public class TestBinarySearchTree {
 
     public static void main(String[] args) {
+//        testBasicBST();
+//        testBFS();
+//        depthFirstSearch();
+//        depthPostOrderSearch();
+        depthINOrderSearch();
+    }
+
+
+    private static void depthFirstSearch(){
+
+        System.out.println("--------------Traverse Depth Frist Search Pre Order with BSF--------------");
+        BinarySearchTree myBST = new BinarySearchTree();
+        myBST.insert(47);
+        myBST.insert(21);
+        myBST.insert(76);
+        myBST.insert(18);
+        myBST.insert(27);
+        myBST.insert(52);
+        myBST.insert(82);
+
+        System.out.println(myBST.DFSPreOrder());
+
+    }
+
+
+    private static void depthINOrderSearch(){
+
+        System.out.println("--------------Traverse Depth Frist Search Post Order with BSF--------------");
+        BinarySearchTree myBST = new BinarySearchTree();
+        myBST.insert(47);
+        myBST.insert(21);
+        myBST.insert(76);
+        myBST.insert(18);
+        myBST.insert(27);
+        myBST.insert(52);
+        myBST.insert(82);
+
+        System.out.println(myBST.DSFInOrder());
+
+    }
+
+
+    private static void depthPostOrderSearch(){
+
+        System.out.println("--------------Traverse Depth Frist Search Post Order with BSF--------------");
+        BinarySearchTree myBST = new BinarySearchTree();
+        myBST.insert(47);
+        myBST.insert(21);
+        myBST.insert(76);
+        myBST.insert(18);
+        myBST.insert(27);
+        myBST.insert(52);
+        myBST.insert(82);
+
+        System.out.println(myBST.DSFPostOrder());
+
+    }
+
+    private static void testBFS(){
+
+        System.out.println("--------------Traverse BST with BSF--------------");
+        BinarySearchTree myBST = new BinarySearchTree();
+        myBST.insert(47);
+        myBST.insert(21);
+        myBST.insert(76);
+        myBST.insert(18);
+        myBST.insert(27);
+        myBST.insert(52);
+        myBST.insert(82);
+
+        System.out.println(myBST.BFS());
+
+    }
+
+    private static void testBasicBST() {
         BinarySearchTree myBST = new BinarySearchTree();
 
         System.out.println("root = " + myBST.root);
