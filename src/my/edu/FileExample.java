@@ -6,6 +6,8 @@ import java.io.IOException;
 public class FileExample {
     public static void main(String[] args) {
 
+        // test
+
         try {
             String currentPath = new File(".").getCanonicalPath();
             System.out.println("Current dir: " + currentPath);
